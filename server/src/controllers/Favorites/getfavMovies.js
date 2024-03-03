@@ -46,7 +46,7 @@ const getFavMovies = async (id) => {
 
     console.log(favMovies, "las favoritas");
 
-    return favMovies
+    return favMovies;
     
 
 };
