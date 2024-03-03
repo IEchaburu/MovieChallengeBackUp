@@ -1,18 +1,23 @@
 import { useSelector } from "react-redux";
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import "bootstrap/dist/css/bootstrap.min.css";
+import image from "../../Utils/images/grey-user.png"
 import './Manager.css'
 
 const UserManager = () => {
     const userLogged = useSelector((state) => state.userLogged);
 
     const userBotton = () => {
-        if (userLogged) {
+        if (!userLogged) {
             return (
                 <a class="btn btn-outline-light" href="/login" role="button">Login/Register</a>
             )
         } else {
-            <i className="bi bi-person" role="button" href="/profile"></i>
+            return (
+                <a className="profile-icon" href="/profile" role="button">
+                    <img src={image} alt="image" style={{ width: "40px", height: "auto" }}/>
+                </a>
+            )
         };
     };
 
