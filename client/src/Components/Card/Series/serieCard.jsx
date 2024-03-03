@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import './SerieCard.css';
@@ -14,7 +13,7 @@ const Card = (props) => {
     // TODOS LOS GENEROS PARA ASI PODER ALAMACENAR LOS NOMBRES DEL GENERO RESPECTIVO
     props.genres?.forEach(element => {
         seriesGenres.forEach(sGenre => {
-            if (element == sGenre.id) {
+            if (element === sGenre.id) {
                 genres.push(sGenre.name);
             }
         })

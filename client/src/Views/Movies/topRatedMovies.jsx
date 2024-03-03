@@ -1,5 +1,5 @@
 import Cards from "../../Components/Cards/Movies/movieCards";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getMovieGenres, getTopRatedMovies } from "../../Redux/Actions/Movies/movieActions";
 

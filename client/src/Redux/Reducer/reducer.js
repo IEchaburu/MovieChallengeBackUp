@@ -1,5 +1,6 @@
 import { GET_MOVIES_GENRES, GET_MOVIES_NAME, GET_MOVIE_ID, GET_POPULAR_MOVIES, GET_TOP_RATED_MOVIES } from "../Actions/Movies/movieActionTypes";
 import { GET_POPULAR_SERIES, GET_SERIES_GENRES, GET_SERIES_ID, GET_SERIES_NAME, GET_TOP_RATED_SERIES } from "../Actions/Series/seriesActionTypes";
+import { CREATE_USER, GET_USER, SET_USER } from "../Actions/User/actionTypes";
 
 const initialState = {
     //ESTADOS RELACIONADOS A LAS MOVIES
@@ -14,7 +15,10 @@ const initialState = {
     topRatedSeries: [],
     seriesByName: [],
     serieByID: [],
-    seriesGenres: []
+    seriesGenres: [],
+
+    //ESTADOS RELACIONADOS AL USUARIO
+    userLogged: []
 };
 
 
@@ -79,6 +83,20 @@ const rootReducer = (state = initialState, action) => {
             return {
                 ...state,
                 seriesGenres: action.payload
+            };
+
+        //CASOS RELACIONADOS AL USUARIO
+        case GET_USER:
+            window.alert("Successfull Log In");
+            return {
+                ...state,
+                userLogged: action.payload
+            };
+        case CREATE_USER:
+            window.alert("Successfull registration")
+            return {
+                ...state,
+                userLogged: action.payload
             };
             
         default:

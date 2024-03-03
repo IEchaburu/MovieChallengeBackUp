@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
@@ -13,7 +12,7 @@ const Card = (props) => {
     // TODOS LOS GENEROS PARA ASI PODER ALAMACENAR LOS NOMBRES DEL GENERO RESPECTIVO
     props.genres?.forEach(element => {
         movieGenres.forEach(mGenre => {
-            if (element == mGenre.id) {
+            if (element === mGenre.id) {
                 genres.push(mGenre.name);
             }
         })

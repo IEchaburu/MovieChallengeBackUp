@@ -1,5 +1,5 @@
 import Cards from "../../../Components/Cards/Series/seriesCards";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getSeriesGenres, getTopRatedSeries } from '../../../Redux/Actions/Series/seriesActions';
 

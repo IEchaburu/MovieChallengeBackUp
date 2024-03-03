@@ -1,13 +1,13 @@
 const { Router } = require("express");
 const postNewUser = require('../handlers/Users/newUser');
-//const passport = require('../passportConfig');
-const passport = require("passport")
+const user_login = require('../handlers/Users/userLogin');
 
 
 const users_router = Router();
 
 
 users_router.post('/create_user', postNewUser);
+users_router.post('/user_login', user_login);
 
 
 

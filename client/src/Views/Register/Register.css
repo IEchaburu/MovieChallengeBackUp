@@ -1,0 +1,20 @@
+.backgroundLogin{
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.error-text {
+    color: red;
+    height: 2px;
+    font-size: 13px;
+}
+
+.eye {
+    cursor: pointer;
+}
+
+.btn-outline-primary-custom-button-height-mx-2 {
+    cursor: pointer;
+}

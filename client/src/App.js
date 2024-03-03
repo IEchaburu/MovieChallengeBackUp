@@ -1,5 +1,5 @@
 import './App.css';
-import { Route, Routes, useLocation } from 'react-router-dom';
+import { Route, Routes} from 'react-router-dom';
 import PopularSeries from './Views/Series/Popular Series/popularSeries';
 import Home from './Views/Home/home';
 import TopRatedSeries from './Views/Series/Top Rated Series/topRatedSeries';
@@ -10,11 +10,11 @@ import Nav from './Components/Nav Bar/navBar';
 import Login from './Views/Login/login';
 import SearchedMovies from './Views/Search/Movies/movieSearch';
 import SearchedSeries from './Views/Search/Series/serieSearch';
+import Register from './Views/Register/register';
 
 
 
 function App() {
-  const location = useLocation();
 
   return (
     <div className="App">
@@ -41,6 +41,8 @@ function App() {
         <Route path="/series_search" element={<SearchedSeries/>}/>
 
         <Route path="/login" element={<Login/>}/>
+
+        <Route path="/register" element={<Register/>}/>
 
 
         {/* <Route path="/detail/:id" component={Detail}/> */}
