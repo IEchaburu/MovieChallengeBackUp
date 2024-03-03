@@ -4,6 +4,7 @@ import { getMoviesByName } from '../../Redux/Actions/Movies/movieActions';
 import { getSeriesByName } from "../../Redux/Actions/Series/seriesActions";
 import { useNavigate } from "react-router-dom";
 import 'bootstrap/dist/js/bootstrap.bundle.min';
+import "./SearchBar.css"
 
 const SearchBar = () => {
     const dispatch = useDispatch();

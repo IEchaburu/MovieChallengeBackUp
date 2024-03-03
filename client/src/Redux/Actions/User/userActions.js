@@ -1,5 +1,5 @@
 import axios from "axios";
-import { CREATE_USER, GET_USER } from "./actionTypes";
+import { CREATE_USER, GET_USER, USER_LOGUOT } from "./actionTypes";
 
 
 export const userLogin = (body) => {
@@ -37,4 +37,19 @@ export const createUser = (body) => {
       window.alert(error.response.data.error);
     }
   }
+};
+
+export const userLogOut = () => {
+  return async (dipatch) => {
+    try {
+
+      return dipatch({
+        type: USER_LOGUOT,
+      });
+
+    } catch (error) {
+      console.log(error);
+      window.alert(error.response.data);
+    };
+  };
 };
