@@ -2,6 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import './Nav.css';
 import SearchBar from "../Search Bar/searchBar";
+import UserManager from '../Account Manager/manager';
 
 
 const Nav = () => {
@@ -43,6 +44,7 @@ const Nav = () => {
                         </li>
                     </ul>
                     <SearchBar/>
+                    <UserManager/>
                 </div>
             </div>
         </nav>
