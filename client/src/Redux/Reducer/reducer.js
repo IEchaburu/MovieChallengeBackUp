@@ -1,7 +1,7 @@
 import { DELETE_FAVORITE_MOVIE, GET_FAVORITE_MOVIES, POST_FAVORITE_MOVIE, REMOVE_FAVORITE_MOVIE } from "../Actions/Favorites/Movies/favMActionTypes";
 import { DELETE_FAVORITE_SERIE, GET_FAVORITE_SERIES, POST_FAVORITE_SERIE, REMOVE_FAVORITE_SERIE } from "../Actions/Favorites/Series/favSActionTypes";
-import { GET_MOVIES_GENRES, GET_MOVIES_NAME, GET_MOVIE_ID, GET_POPULAR_MOVIES, GET_TOP_RATED_MOVIES } from "../Actions/Movies/movieActionTypes";
-import { GET_POPULAR_SERIES, GET_SERIES_GENRES, GET_SERIES_ID, GET_SERIES_NAME, GET_TOP_RATED_SERIES } from "../Actions/Series/seriesActionTypes";
+import { GET_MOVIES_GENRES, GET_MOVIES_NAME, GET_MOVIE_CAST, GET_MOVIE_CREW, GET_MOVIE_ID, GET_POPULAR_MOVIES, GET_TOP_RATED_MOVIES } from "../Actions/Movies/movieActionTypes";
+import { GET_POPULAR_SERIES, GET_SERIES_GENRES, GET_SERIES_ID, GET_SERIES_NAME, GET_SERIE_CAST, GET_SERIE_CREW, GET_TOP_RATED_SERIES } from "../Actions/Series/seriesActionTypes";
 import { CREATE_USER, GET_USER, SET_USER, USER_LOGUOT } from "../Actions/User/actionTypes";
 
 const initialState = {
@@ -11,6 +11,8 @@ const initialState = {
     moviesByName: [],
     movieByID: [],
     movieGenres: [],
+    movieCast: [],
+    movieCrew: [],
 
     //ESTADOS RELACIONADOS A LAS SERIES
     popularSeries: [],
@@ -18,6 +20,8 @@ const initialState = {
     seriesByName: [],
     serieByID: [],
     seriesGenres: [],
+    serieCast: [],
+    serieCrew: [],
 
     //ESTADOS RELACIONADOS AL USUARIO
     userLogged: [],
@@ -61,6 +65,16 @@ const rootReducer = (state = initialState, action) => {
                 ...state,
                 movieGenres: action.payload
             };
+        case GET_MOVIE_CAST:
+            return {
+                ...state,
+                movieCast: action.payload
+            }
+        case GET_MOVIE_CREW:
+            return {
+                ...state,
+                movieCrew: action.payload
+            }
 
         //CASOS RELACIONADOS A LAS SERIES
         case GET_POPULAR_SERIES:
@@ -91,6 +105,16 @@ const rootReducer = (state = initialState, action) => {
                 ...state,
                 seriesGenres: action.payload
             };
+        case GET_SERIE_CAST:
+            return {
+                ...state,
+                serieCast: action.payload
+            };
+        case GET_SERIE_CREW:
+            return {
+                ...state,
+                serieCrew: action.payload
+            }
 
         //CASOS RELACIONADOS AL USUARIO
         case GET_USER:

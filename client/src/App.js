@@ -13,6 +13,10 @@ import SearchedSeries from './Views/Search/Series/serieSearch';
 import Register from './Views/Register/register';
 import FavoriteMovies from './Views/Favorites/Movies/favMovies';
 import FavoriteSeries from './Views/Favorites/Series/favSeries';
+import MovieCast from './Views/Details/Movie Details/movieCast';
+import SerieCast from './Views/Details/Serie Details/serieCast';
+import MovieCrew from './Views/Details/Movie Details/movieCrew';
+import SerieCrew from './Views/Details/Serie Details/serieCrew';
 
 
 
@@ -48,6 +52,14 @@ function App() {
         <Route path="/profile" element={<FavoriteMovies/>}/>
 
         <Route path="/favorite_series" element={<FavoriteSeries/>}/>
+
+        <Route path="/movie_cast" element={<MovieCast/>}/>
+
+        <Route path="/serie_cast" element={<SerieCast/>}/>
+
+        <Route path="/movie_crew" element={<MovieCrew/>}/>
+
+        <Route path="/serie_crew" element={<SerieCrew/>}/>
 
       </Routes>
 

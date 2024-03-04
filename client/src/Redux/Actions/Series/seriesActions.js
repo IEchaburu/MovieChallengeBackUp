@@ -1,5 +1,5 @@
 import axios from "axios";
-import { GET_POPULAR_SERIES, GET_SERIES_GENRES, GET_SERIES_ID, GET_SERIES_NAME, GET_TOP_RATED_SERIES } from "./seriesActionTypes";
+import { GET_POPULAR_SERIES, GET_SERIES_GENRES, GET_SERIES_ID, GET_SERIES_NAME, GET_SERIE_CAST, GET_SERIE_CREW, GET_TOP_RATED_SERIES } from "./seriesActionTypes";
 
 export const getPopularSeries = () => {
     return async (dispatch) => {
@@ -80,3 +80,17 @@ export const getSeriesGenres = () => {
         }
     }
 };
+
+export const getCast = (payload) => {
+    return {
+        type: GET_SERIE_CAST,
+        payload
+    }
+}
+
+export const getCrew = (payload) => {
+    return {
+        type: GET_SERIE_CREW,
+        payload
+    }
+}

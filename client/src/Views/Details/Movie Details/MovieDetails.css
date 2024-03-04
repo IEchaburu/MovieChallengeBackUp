@@ -1,4 +1,21 @@
-.card-mb-3{
-    width: 70%;
-    padding: 10rem;
+.container{
+    
+    width: 80%;
+    margin-top: 10px;
+    justify-content: center;
 }
+
+.card-title-2 {
+    font-size: 50px; 
+    margin-bottom: 20px; 
+}
+
+.card-text {
+    font-size: 18px; 
+    text-align: justify;
+}
+
+.card-text-2 {
+    font-size: 15px; 
+    text-align: justify;
+} 
