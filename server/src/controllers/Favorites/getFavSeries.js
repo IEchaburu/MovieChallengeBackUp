@@ -24,7 +24,7 @@ const getFavSeries = async (id) => {
     db.connect();
 
     const findSeries = await db.query("SELECT * FROM seriesbyusers WHERE userid = $1", [id]);
-    if (findSeries.rowCount == 0) throw new Error ("There are no favorite series!");
+    if (findSeries.rowCount == 0) return [];
     
     let favSeries = [];
     

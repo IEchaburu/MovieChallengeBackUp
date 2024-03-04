@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { postFavMovie, deleteFavMovie } from '../../../Redux/Actions/Favorites/Movies/favMactions';
+import { postFavMovie, deleteFavMovie, removeMovie } from '../../../Redux/Actions/Favorites/Movies/favMactions';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import './MovieCard.css';
@@ -29,6 +29,7 @@ const Card = (props) => {
         if (isFav) {
            setIsFav(false);
            console.log(body, "removid");
+           dispatch(removeMovie(props.id))
            dispatch(deleteFavMovie(body));
         } else {
            setIsFav(true);
@@ -69,9 +70,9 @@ const Card = (props) => {
                     {
                         isFav 
                         ? (
-                        <button onClick={handleFavorite} style={{ marginLeft:"5px", backgroundColor:"transparent", borderColor:"transparent"}}><img src={image} alt="image" style={{ width: "30px", height: "auto"}}/></button>
+                        <button onClick={handleFavorite} style={{ marginLeft:"5px", backgroundColor:"transparent", borderColor:"transparent"}} alt="fav"><img src={image} alt="image" style={{ width: "30px", height: "auto"}}/></button>
                         ) : (
-                        <button onClick={handleFavorite} style={{ marginLeft:"5px", backgroundColor:"transparent", borderColor:"transparent"}}><img src={greystar} alt="greystar" style={{ width: "30px", height: "auto"}}/></button>
+                        <button onClick={handleFavorite} style={{ marginLeft:"5px", backgroundColor:"transparent", borderColor:"transparent"}} alt="nofav"><img src={greystar} alt="greystar" style={{ width: "30px", height: "auto"}}/></button>
                         )
                     }
             </div>

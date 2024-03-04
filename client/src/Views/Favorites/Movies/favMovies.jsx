@@ -1,5 +1,5 @@
 import Cards from "../../../Components/Cards/Movies/movieCards";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getFavMovies } from "../../../Redux/Actions/Favorites/Movies/favMactions";
 import FavDropDown from "../../../Components/Fav Manager/favDropDown";
@@ -10,22 +10,34 @@ const FavoriteMovies =() => {
     const dispatch = useDispatch();
     const userLogged = useSelector((state) => state.userLogged);
     const favoriteMovies = useSelector((state) => state.favoriteMovies);
-    console.log(userLogged, "la data del user");
+    const [dataLoaded, setDataLoaded] = useState(false);
 
     let id = userLogged.id;
+
     
     useEffect(() => {
-        dispatch(getFavMovies(id));
-    }, [dispatch]);
+      if (favoriteMovies.length == 0) {          
+          setDataLoaded(true); 
+      } else {
+          setDataLoaded(false);
+      };
+      dispatch(getFavMovies(id));
+
+    }, [favoriteMovies, dispatch]);
     
         
     return (
       <div>
         <FavDropDown/>
-        {/* <h2>UMOVIE</h2> */}
-        <div>
-            <Cards movies={favoriteMovies} /> 
-        </div>   
+        { dataLoaded ? (
+          <h2 style={{marginTop:"20px"}}>There are no faved Movies</h2>
+        ) : (
+          <div>
+              <Cards movies={favoriteMovies} /> 
+          </div>
+        )
+        }
+        
       </div>
     );
   }

@@ -1,5 +1,5 @@
 import axios from "axios";
-import { DELETE_FAVORITE_MOVIE, GET_FAVORITE_MOVIES, POST_FAVORITE_MOVIE } from "./favMActionTypes";
+import { DELETE_FAVORITE_MOVIE, GET_FAVORITE_MOVIES, POST_FAVORITE_MOVIE, REMOVE_FAVORITE_MOVIE } from "./favMActionTypes";
 
 
 
@@ -52,4 +52,11 @@ export const deleteFavMovie = (body) => {
           window.alert(error.response.data.error);
         };
       };
+};
+
+export const removeMovie = (payload) => {
+    return {
+      type: REMOVE_FAVORITE_MOVIE,
+      payload
+    };
 };

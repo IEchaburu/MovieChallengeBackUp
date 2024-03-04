@@ -24,7 +24,7 @@ const getFavMovies = async (id) => {
     db.connect();
 
     const findMovies = await db.query("SELECT * FROM moviesbyusers WHERE userid = $1", [id]);
-    if (findMovies.rowCount == 0) throw new Error ("There are no favorite movies!");
+    if (findMovies.rowCount == 0) return [];
     
     //console.log(findMovies.rows[0],"fav movies");
     let favMovies = [];
