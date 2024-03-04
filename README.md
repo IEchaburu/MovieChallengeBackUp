@@ -33,7 +33,7 @@ La aplicación cliente estará disponible en http://localhost:3000.
 # Uso del Proyecto
 Una vez que tanto el servidor como el cliente estén en funcionamiento, podrás acceder a la aplicación MovieApp en tu navegador web. 
 
-Sugerimos el uso de CHROME ya que fue desarrollado sobre este browser y la aplicacion no fue testeada en nigun otro browser.
+Sugerimos el uso de CHROME ya que fue desarrollado sobre este browser y la aplicacion no fue testeada en nigun otro browser. Una vez inicializada la aplicacion dirigirse a http://localhost:3000/home
 
 La aplicación te permitirá explorar películas y series, ver detalles de películas y series, agregar películas a tus favoritos y más.
 
