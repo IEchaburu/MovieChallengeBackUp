@@ -13,7 +13,7 @@ npm (Node Package Manager)
 # Inicialización del Servidor
 Abre una terminal y navega hasta la carpeta del servidor (server).
 
-Ejecuta npm install instalar las dependencias del servidor.
+Ejecuta npm install para instalar las dependencias del servidor.
 
 Configura las variables de entorno necesarias para la base de datos que fueron enviadas por mail. Copiar el archivo .env en la carpeta /server/src.
 
