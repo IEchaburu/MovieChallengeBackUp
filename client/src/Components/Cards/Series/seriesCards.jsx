@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 const Cards = ({ series }) => {
     const [dataLoaded, setDataLoaded] = useState(false);
 
+    
     useEffect(() => {
         if (series.length !== 0) {          
             setDataLoaded(true); 

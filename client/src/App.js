@@ -11,6 +11,8 @@ import Login from './Views/Login/login';
 import SearchedMovies from './Views/Search/Movies/movieSearch';
 import SearchedSeries from './Views/Search/Series/serieSearch';
 import Register from './Views/Register/register';
+import FavoriteMovies from './Views/Favorites/Movies/favMovies';
+import FavoriteSeries from './Views/Favorites/Series/favSeries';
 
 
 
@@ -43,6 +45,10 @@ function App() {
         <Route path="/login" element={<Login/>}/>
 
         <Route path="/register" element={<Register/>}/>
+
+        <Route path="/profile" element={<FavoriteMovies/>}/>
+
+        <Route path="/favorite_series" element={<FavoriteSeries/>}/>
 
 
         {/* <Route path="/detail/:id" component={Detail}/> */}

@@ -108,7 +108,9 @@ const rootReducer = (state = initialState, action) => {
         case USER_LOGUOT:
             return {
                 ...state,
-                userLogged: []
+                userLogged: [],
+                favoriteMovies: [],
+                favoriteSeries: []
             };
         
         //CASOS RELACIONADOS A FAVORITOS
