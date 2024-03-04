@@ -46,6 +46,19 @@ const Card = (props) => {
         });
      }, [favoriteMovies]);
 
+
+     const disableByEmptyProps = () => {
+        let disabledAux = true
+        console.log(userLogged, "el user logged");
+        if (userLogged.length == 0) {
+          disabledAux = true;
+        } else {
+          disabledAux = false
+        };
+
+        return disabledAux;
+     }
+
     // ESTA FUNCION COMPARA LOS ID DE LOS GENEROS DE LA PELICULA CONTRA
     // TODOS LOS GENEROS PARA ASI PODER ALAMACENAR LOS NOMBRES DEL GENERO RESPECTIVO
     props.genres?.forEach(element => {
@@ -70,9 +83,9 @@ const Card = (props) => {
                     {
                         isFav 
                         ? (
-                        <button onClick={handleFavorite} style={{ marginLeft:"5px", backgroundColor:"transparent", borderColor:"transparent"}} alt="fav"><img src={image} alt="image" style={{ width: "30px", height: "auto"}}/></button>
+                        <button onClick={handleFavorite} disabled={disableByEmptyProps()} style={{ marginLeft:"5px", backgroundColor:"transparent", borderColor:"transparent"}} alt="fav"><img src={image} alt="image" style={{ width: "30px", height: "auto"}}/></button>
                         ) : (
-                        <button onClick={handleFavorite} style={{ marginLeft:"5px", backgroundColor:"transparent", borderColor:"transparent"}} alt="nofav"><img src={greystar} alt="greystar" style={{ width: "30px", height: "auto"}}/></button>
+                        <button onClick={handleFavorite} disabled={disableByEmptyProps()} style={{ marginLeft:"5px", backgroundColor:"transparent", borderColor:"transparent"}} alt="nofav"><img src={greystar} alt="greystar" style={{ width: "30px", height: "auto"}}/></button>
                         )
                     }
             </div>
