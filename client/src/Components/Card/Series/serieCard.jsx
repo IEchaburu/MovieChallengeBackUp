@@ -3,7 +3,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min';
 import './SerieCard.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect, useState } from 'react';
-import { deleteFavSerie, postFavSerie } from '../../../Redux/Actions/Favorites/Series/favSActions';
+import { deleteFavSerie, postFavSerie, removeSerie } from '../../../Redux/Actions/Favorites/Series/favSActions';
 import image from "../../../Utils/images/star.png";
 import greystar from "../../../Utils/images/greystar.png"
 
@@ -27,6 +27,7 @@ const Card = (props) => {
     const handleFavorite = () => {
         if (isFav) {
            setIsFav(false);
+           dispatch(removeSerie(props.id))
            dispatch(deleteFavSerie(body));
         } else {
            setIsFav(true);

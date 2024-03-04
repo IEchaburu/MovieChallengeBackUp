@@ -1,5 +1,5 @@
 import { DELETE_FAVORITE_MOVIE, GET_FAVORITE_MOVIES, POST_FAVORITE_MOVIE, REMOVE_FAVORITE_MOVIE } from "../Actions/Favorites/Movies/favMActionTypes";
-import { DELETE_FAVORITE_SERIE, GET_FAVORITE_SERIES, POST_FAVORITE_SERIE } from "../Actions/Favorites/Series/favSActionTypes";
+import { DELETE_FAVORITE_SERIE, GET_FAVORITE_SERIES, POST_FAVORITE_SERIE, REMOVE_FAVORITE_SERIE } from "../Actions/Favorites/Series/favSActionTypes";
 import { GET_MOVIES_GENRES, GET_MOVIES_NAME, GET_MOVIE_ID, GET_POPULAR_MOVIES, GET_TOP_RATED_MOVIES } from "../Actions/Movies/movieActionTypes";
 import { GET_POPULAR_SERIES, GET_SERIES_GENRES, GET_SERIES_ID, GET_SERIES_NAME, GET_TOP_RATED_SERIES } from "../Actions/Series/seriesActionTypes";
 import { CREATE_USER, GET_USER, SET_USER, USER_LOGUOT } from "../Actions/User/actionTypes";
@@ -139,11 +139,18 @@ const rootReducer = (state = initialState, action) => {
                 ...state
             };
         case REMOVE_FAVORITE_MOVIE:
-            let withoutRemoved = state.favoriteMovies.filter(movie => movie.id !== action.payload);
+            let withoutRemovedM = state.favoriteMovies.filter(movie => movie.id !== action.payload);
 
             return {
                 ...state,
-                favoriteMovies: withoutRemoved
+                favoriteMovies: withoutRemovedM
+            };
+        case REMOVE_FAVORITE_SERIE:
+            let withoutRemovedS = state.favoriteSeries.filter(serie => serie.id !== action.payload);
+    
+            return {
+                ...state,
+                favoriteMovies: withoutRemovedS
             }
             
         default:

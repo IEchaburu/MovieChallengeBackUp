@@ -1,5 +1,5 @@
 import axios from "axios";
-import { DELETE_FAVORITE_SERIE, GET_FAVORITE_SERIES, POST_FAVORITE_SERIE } from "./favSActionTypes";
+import { DELETE_FAVORITE_SERIE, GET_FAVORITE_SERIES, POST_FAVORITE_SERIE, REMOVE_FAVORITE_SERIE } from "./favSActionTypes";
 
 
 
@@ -53,4 +53,11 @@ export const deleteFavSerie = (body) => {
           window.alert(error.response.data.error);
         };
       };
+};
+
+export const removeSerie = (payload) => {
+  return {
+    type: REMOVE_FAVORITE_SERIE,
+    payload
+  };
 };
