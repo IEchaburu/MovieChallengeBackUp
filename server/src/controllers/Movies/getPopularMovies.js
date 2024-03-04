@@ -10,7 +10,7 @@ const getPopularMovies = async () => {
 
     //CON EL WHILE SE HACEN PETICIONES A LA CANTIDAD DE PAGINAS INDICADAS PARA ASI
     //PODER LA CANTIDAD DE PELICULAS DESEADAS, EN ESTE CASO: 100
-    while (index < 2) {
+    while (index < 6) {
         
         //LE PIDE LAS PELICULAS A LA API
         const { data } = await axios.get(`https://api.themoviedb.org/3/movie/popular?language=en-US&page=${index}&api_key=${API_KEY}`);

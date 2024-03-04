@@ -32,7 +32,8 @@ const Cards = ({ movies }) => {
                     )
                 })
                 ) :
-                <h1>Loading...</h1>
+                //<h1>Loading...</h1>
+                <img src="https://media1.giphy.com/media/3oEjI6SIIHBdRxXI40/200w.gif?cid=6c09b952mcpl9zgi32412hq2gonc9cdy3ps3fcv98qbxcbyo&ep=v1_gifs_search&rid=200w.gif&ct=g" alt="gif"/>
                 
             }
         </div>

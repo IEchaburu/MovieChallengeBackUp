@@ -12,7 +12,7 @@ const FavoriteMovies =() => {
     const favoriteMovies = useSelector((state) => state.favoriteMovies);
     console.log(userLogged, "la data del user");
 
-    let id = userLogged;
+    let id = userLogged.id;
     
     useEffect(() => {
         dispatch(getFavMovies(id));

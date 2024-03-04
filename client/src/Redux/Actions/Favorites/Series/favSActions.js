@@ -41,7 +41,7 @@ export const deleteFavSerie = (body) => {
     return async (dipatch) => {
         try {
     
-          const { data } = await axios.delete("http://localhost:3001/favorite/delete_serie", body);
+          const { data } = await axios.post("http://localhost:3001/favorite/delete_serie", body);
     
           return dipatch({
             type: DELETE_FAVORITE_SERIE,

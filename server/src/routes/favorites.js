@@ -12,8 +12,8 @@ favorite_router.get('/favorite_movies/:id', getFavoriteMovies);
 favorite_router.get('/favorite_series/:id', getFavoriteSeries);
 favorite_router.post('/post_movie', postFavoriteMovie);
 favorite_router.post('/post_serie', postFavoriteSerie);
-favorite_router.delete('/delete_movie', deleteFavoriteMovie);
-favorite_router.delete('/delete_serie', deleteFavoriteSerie);
+favorite_router.post('/delete_movie', deleteFavoriteMovie);
+favorite_router.post('/delete_serie', deleteFavoriteSerie);
 
 
 module.exports = favorite_router;

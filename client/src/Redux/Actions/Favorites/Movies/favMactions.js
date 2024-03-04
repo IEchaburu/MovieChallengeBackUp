@@ -22,7 +22,6 @@ export const getFavMovies = (id) => {
 export const postFavMovie = (body) => {
     return async (dipatch) => {
         try {
-    
           const { data } = await axios.post("http://localhost:3001/favorite/post_movie", body);
     
           return dipatch({
@@ -40,9 +39,9 @@ export const postFavMovie = (body) => {
 export const deleteFavMovie = (body) => {
     return async (dipatch) => {
         try {
-    
-          const { data } = await axios.delete("http://localhost:3001/favorite/delete_movie", body);
-    
+          
+          const { data } = await axios.post("http://localhost:3001/favorite/delete_movie", body);
+          
           return dipatch({
             type: DELETE_FAVORITE_MOVIE,
             payload: data

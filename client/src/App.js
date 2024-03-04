@@ -24,7 +24,6 @@ function App() {
         <Nav/>
 
       <Routes>
-        {/* <Route path="/" element={<Nav/>}/> */}
 
         <Route path="/home" element={<Home/>}/>
 
@@ -49,13 +48,6 @@ function App() {
         <Route path="/profile" element={<FavoriteMovies/>}/>
 
         <Route path="/favorite_series" element={<FavoriteSeries/>}/>
-
-
-        {/* <Route path="/detail/:id" component={Detail}/> */}
-
-        {/* <Route path="/create" component={Create}/> */}
-
-        {/* <Route path="/about" component={About}/> */}
 
       </Routes>
 
