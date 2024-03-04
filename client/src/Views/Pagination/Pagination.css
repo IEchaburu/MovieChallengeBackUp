@@ -1,0 +1,35 @@
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+    margin-bottom: 50px;
+    border-radius: 5px;
+    padding: 5px;
+  }
+    
+  .button {
+    border: none;
+    background-color: #f0f0f0;
+    padding: 8px 12px;
+    margin: 0 5px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+    
+  .button:hover {
+    background-color: #ddd;
+  }
+    
+  .button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+    
+  .info {
+    font-size: 20px;
+    /* margin-top: 10px; */
+    color: black;
+    justify-content: space-around;
+  }
